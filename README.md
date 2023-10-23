@@ -17,7 +17,7 @@ This Python script allows you to download VirtualBox Guest Additions and Extensi
 
 2. Navigate to the project directory:
 
-`cd virtualbox-addons-downloader`
+`cd VBox-addons-script`
 
 Run the script:
 
