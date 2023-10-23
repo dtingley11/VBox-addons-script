@@ -1,1 +1,50 @@
 # VBox-addons-script
+
+This Python script allows you to download VirtualBox Guest Additions and Extension Packs easily. It validates user input for VirtualBox versions and provides options for downloading Guest Additions or Extension Packs.
+
+## Prerequisites
+
+- Python 3.x
+- Required Python packages: `requests`, `tqdm` - Install them using the following command:
+
+`pip install requests tqdm`
+
+## Usage
+
+1. Clone the repository:
+`git clone https://github.com/your-username/virtualbox-addons-downloader.git`
+
+
+2. Navigate to the project directory:
+
+`cd virtualbox-addons-downloader`
+
+Run the script:
+
+`python virtualbox-addons-downloader.py`
+
+
+Follow the on-screen prompts to download VirtualBox Add-Ons.
+
+## Features
+
+- Supports downloading both Guest Additions and Extension Packs.
+- Validates user input for VirtualBox versions and options.
+- Displays download progress using a progress bar.
+
+## Contributing
+
+Feel free to contribute to this project by opening issues or creating pull requests. Your feedback and contributions are welcome!
+
+## License
+
+This project is licensed under the GNU General Public License V3  - see the [LICENSE](LICENSE) file for details.
+
+## Thanks
+
+We would like to express our gratitude to the VirtualBox team for providing such amazing virtualization software. Their hard work and dedication make projects like this possible.
+
+---
+
+
+
