@@ -26,6 +26,8 @@ Run the script:
 
 Follow the on-screen prompts to download VirtualBox Add-Ons.
 
+**Note** If the version you choose is not a beta version, the file will be named somthing like Oracle_VM_VirtualBox_Extension_Pack-x.x.x_**BETANone** or VBoxGuestAdditions_7.0.0_**BETANone** Do not be alarmed, that just means the edition you downloaded was not a beta version.
+
 ## Features
 
 - Supports downloading both Guest Additions and Extension Packs.
