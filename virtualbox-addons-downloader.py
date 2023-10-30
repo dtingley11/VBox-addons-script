@@ -15,15 +15,19 @@ except ImportError:
     exit(1)
 
 def get_downloads_folder():
-    # Get the user's home directory
-    home = os.path.expanduser("~")
-    # Determine the Downloads folder path based on the operating system
-    if os.name == 'posix':  # Unix/Linux/Mac OS
-        downloads_folder = os.path.join(home, 'Downloads')
-    elif os.name == 'nt':  # Windows
-        downloads_folder = os.path.join(home, 'Downloads')
+    if 'ANDROID_ROOT' in os.environ:
+        # Android
+        downloads_folder = os.getcwd()  # Save files in the current directory for Android
+    elif os.name == 'posix':
+        # Unix/Linux/Mac OS
+        downloads_folder = os.path.join(os.path.expanduser("~"), 'Downloads')
+    elif os.name == 'nt':
+        # Windows
+        downloads_folder = os.path.join(os.path.expanduser("~"), 'Downloads')
     else:
-        downloads_folder = home  # Fallback to the home directory if the OS is unknown
+        # Fallback to the home directory if the OS is unknown
+        downloads_folder = os.path.expanduser("~")
+    
     return downloads_folder
 
 def get_user_input():
@@ -97,7 +101,17 @@ def download_file(version, beta, choice, timeout=20):
                     f.write(data)
             
             progress_bar.close()
-            print(f"{file_name} downloaded successfully. It is saved in the Downloads folder.")
+            success_message = f"{file_name} downloaded successfully."
+            if os.name == 'posix' and 'ANDROID_ROOT' in os.environ:
+                success_message += f" It is saved in the current directory: {os.getcwd()}"
+            elif os.name == 'posix':
+                success_message += f" It is saved in the Downloads folder: {downloads_folder}"
+            elif os.name == 'nt':
+                success_message += f" It is saved in the Downloads folder: {downloads_folder}"
+            else:
+                success_message += f" It is saved in the home directory: {downloads_folder}"
+            
+            print(success_message)
             return True  # Exit the function if download is successful
         except requests.Timeout:
             print("Timeout error: The download took too long. Please try again.")
