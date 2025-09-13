@@ -6,7 +6,7 @@ This Python script allows you to download VirtualBox Guest Additions and Extensi
 
 - Python 3.x
 
-- Required Python packages: `requests`, `tqdm` - Install them using the following command:
+- Required Python packages: `requests` and `tqdm`. Install them using the following command:
 
    ```sh
    #!/usr/bin/env sh
@@ -40,7 +40,7 @@ This Python script allows you to download VirtualBox Guest Additions and Extensi
 
 #### Note
 
-If the version you choose is not a beta version, the file will be named somthing like <code>Oracle_VM_VirtualBox_Extension_Pack-x.x.x_<b>BETANone</b></code> or <code>VBoxGuestAdditions_x.x.x_<b>BETANone</b></code> Do not be alarmed, that just means the edition you downloaded was not a beta version.
+If the version you choose is not a beta version, the file will be named somthing like <code>Oracle_VM_VirtualBox_Extension_Pack-x.x.x_<b>BETANone</b></code> or <code>VBoxGuestAdditions_x.x.x_<b>BETANone</b></code>. Do not be alarmed, that just means the edition you downloaded was not a beta version.
 
 ## Features
 
